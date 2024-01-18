@@ -9,6 +9,8 @@ import onionImg from '../assets/image 6.jpg';
 import lettuceImg from '../assets/image 7.jpg';
 import breadImg from '../assets/image 8.jpg';
 import eggImg from '../assets/image 9.jpg';
+import { GoPlus } from "react-icons/go";
+import { LuMinus } from "react-icons/lu";
 import '../styles/Product.css';
 import { ToastContainer, toast } from "react-toastify";
 import CartContext from "../context/CartContext";
@@ -55,9 +57,13 @@ const Products = () => {
                     add
                   </button> */}
                   <div className="d-flex gap-2 h-25 justify-content-center align-items-center">
-                  {/* <Button className="h-50"> - </Button>
-                  <h2>1</h2>
-                  <Button className="h-50"> + </Button> */}
+                  <p className='addfont border'>
+              <button className='btn btn-  d-flex align-items-center'>
+                <button className='btn text-danger' onClick={()=>{handleDecrease(datum)}}><LuMinus /></button>
+               
+              <button className='btn text-danger'  onClick={()=>{handleIncrease(datum)}}><GoPlus /></button>
+              </button>
+              </p>
                   </div>
 
                   </div>

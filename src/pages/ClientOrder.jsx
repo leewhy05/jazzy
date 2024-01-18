@@ -5,8 +5,8 @@ const ClientOrder = () => {
 
   return (
     <>
-
-    <h2>Your Order</h2>
+     <hr />
+    <h2>Client Orders Dashboard</h2>
     <ClientOrderId/>
 
     

@@ -50,7 +50,7 @@ const ClientOrderId = () => {
                     <span className="fw-bold">order Id</span> {itx._id}
                   </p>
                   {/* <h4> {itx.createdAt.slice(0,10)}, {itx.createdAt.slice(12,19)}</h4> */}
-                  {/* <h2> {itx.createdAt.slice(12,19)}</h2> */}
+                  <h2> {itx.createdAt}</h2>
 
                   <hr />
                   <h2> {itx.address.city} </h2>
@@ -67,11 +67,10 @@ const ClientOrderId = () => {
                       <div key={its._id} className="">
                         <h4> {its.title} </h4>
                         <h4> {its.category} </h4>
-                        {/* <h4> {its.description} </h4> */}
                         <h4> {its.price} </h4>
                         <h4> {its.quantity} </h4>
                         <img src={its.image} alt="" />
-                        {/* <h3> {its.totalprice} </h3> */}
+                        <h3> {its.totalprice} </h3>
                       </div>
                     );
                   })}
