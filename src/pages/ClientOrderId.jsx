@@ -47,26 +47,29 @@ const ClientOrderId = () => {
                 <div key={itx._id} className="border">
                   {/* <h2> {itx.createdAt}</h2> */}
                   <p className="text-center">
-                    <span className="fw-bold">order Id</span> {itx._id}
+                   <span className="fw-bold">CUSTOMER </span> <span className="fw-bold">ORDER ID</span> {itx._id}
                   </p>
                   {/* <h4> {itx.createdAt.slice(0,10)}, {itx.createdAt.slice(12,19)}</h4> */}
                   <h2> {itx.createdAt}</h2>
 
                   <hr />
-                  <h2> {itx.address.city} </h2>
-                  <h2> {itx.address.housenumber} </h2>
-                  <h2> {itx.address.street} </h2>
+                    <h1 className="text-center text-danger">ADDRESS VERIFICATION</h1>
+                  <h2><span className="text-danger">CITY:</span> {itx.address.city} </h2>
+                  <h2><span className="text-danger">HOUSERNUMBER:</span> {itx.address.housenumber} </h2>
+                  <h2> <span className="text-danger">ADDRESS:</span> {itx.address.street} </h2>
                   <hr />
-                  <h3> {itx.recipient.email} </h3>
-                  <h3> {itx.recipient.firstname} </h3>
-                  <h3> {itx.recipient.lastname} </h3>
-                  <h3> {itx.recipient.phonenumber} </h3>
+                  <h1 className="text-center text-danger">IDENTITY VERIFICATION</h1>
+                  <h3><span className="text-danger">EMAIL:</span> {itx.recipient.email} </h3>
+                  <h3> <span className="text-danger">FIRSTNAME:</span> {itx.recipient.firstname} </h3>
+                  <h3> <span className="text-danger">LASTNAME:</span> {itx.recipient.lastname} </h3>
+                  <h3><span className="text-danger">NUMBER:</span> {itx.recipient.phonenumber} </h3>
                   <hr />
                   {itx.orderItems.map((its) => {
                     return (
                       <div key={its._id} className="">
-                        <h4> {its.title} </h4>
-                        <h4> {its.category} </h4>
+                        <h1 className="text-center text-danger">WHAT YOU ORDER</h1>
+                        <h3> {its.title} </h3>
+                        <h3> {its.category} </h3>
                         <h4> {its.price} </h4>
                         <h4> {its.quantity} </h4>
                         <img src={its.image} alt="" />
@@ -74,7 +77,8 @@ const ClientOrderId = () => {
                       </div>
                     );
                   })}
-                  <h1> Delivery status : Pending </h1>
+                  <h1 className="text-success"> Delivery status : <span className="text-danger"> Pending </span></h1>
+                  <h2 className="text-success text-center">PAY ON DELIVERY</h2>
                 </div>
               );
             })}
